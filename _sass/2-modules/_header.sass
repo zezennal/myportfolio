@@ -1,0 +1,58 @@
+.home-wrap header
+    width: 130px
+    background: white
+    padding: 30px 0
+
+    .header-position
+        position: fixed
+        top: 30px
+        left: 0
+        bottom: 30px
+        width: 135px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    
+    .logo
+        overflow: hidden
+        text-indent: 101%
+        white-space: nowrap
+        background: 
+            image: url(/assets/img/logo-nall.svg)
+            repeat: no-repeat
+            position: center
+            size: contain
+            // color: pink
+        height: 62px
+        padding: 0
+        margin: 0
+
+    .header-nav
+        ul
+            list-style: none
+            margin: 20px 0
+            padding: 0 20px 0 0
+            text-align: right
+
+        li 
+            margin-bottom: 10px
+
+            &:last-child
+                margin-bottom: 0
+
+    .email-link
+        display: block
+        text-align: right
+        padding-right: 20px
+        
+
+    @media (max-width: 775px)
+        .home-wrap header
+            width: auto
+            padding: 20px 0
+
+            .header-position
+                position: relative
+                top: auto
+                bottom: auto
+                left: auot
