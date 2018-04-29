@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     {% if page.type =="post" %}{{ page.styles }}{% endif %}
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  
 </head>
 <body class="{% if page.home %}home blog logged-in{% endif %} {{ page.type }} {%if page.body-name%}{{ page.body-name }}{% endif %}">
 
@@ -16,6 +17,7 @@
     {% if page.url == "/index.html" %}
     <script src="/assets/js/functions.js"></script>
     {% endif %}
+    
     
     
 </body>

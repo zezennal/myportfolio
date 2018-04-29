@@ -1,3 +1,4 @@
+
 $(function() {
   mentoringBubbleClick();
   setInterval(function(){articleTada()}, 4000);
