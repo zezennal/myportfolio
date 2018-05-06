@@ -1,26 +1,11 @@
-<section id="articles" class="articles">
-        <div class="flex flex--center">
-            <div class="col-50">
-                <div class="article-wrap">{% for post in site.posts limit: 12 %}
-                    <a href="{{post.url}}" style="background-image: url({{post.cover}})" class="article-thumb">
-                        <div class="article-meta">
-                            <div class="name">{{post.title}}
-                            </div>
-                            <div class="date">{{post.date | date: "%b %d, %Y"}}
-                            </div>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
-        </div>
-            <div class="col-50 flex flex--center">
-                <!--.order-first-->
-                <div class="col-1">
-                    <div class="desc-wrap">
-                        <p class="home-lead outdented">...Writing and designing articles...
-                        </p><a href="/articles" class="home-cta">See All Articles</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+<div class=" articles main-content portfolio">
+  
+    <div class="portfolio-item medium">one</div>
+    <div class="portfolio-item large two">two</div>
+    <div class="portfolio-item medium">three</div>
+    <div class="portfolio-item small">four</div>
+    <div class="portfolio-item tall">five</div>
+    <div class="portfolio-item wide">six</div>
+ 
+</div>

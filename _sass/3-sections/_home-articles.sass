@@ -1,105 +1,73 @@
-section.articles
-  background:
-    image: url(../img/article-bg.jpg)
-    repeat: repeat
 
-  .home-sections &
-    padding: 0
-
-    @media (max-width: 640px)
-      padding-bottom: 50px
-
-  .col-1
-    display: flex
-    align-items: center
-
-    @media (max-width: 640px)
-      display: block
-
-  .home-cta
-    color: white
-    background: #3d96cb
-
-  .article-wrap
-    //margin: -50px 0
-    clear: both
-    content: ""
-    display: block
-
-  .article-thumb
-    display: block
-    background:
-      size: cover
-      position: center
-    width: 25%
-    float: left
-    position: relative
-    overflow: hidden
-    opacity: 0
-    transform: translateX(-20px)
-    transition: all 300ms ease-in-out
-
-    &.is-visible
-      opacity: 1
-      transform: translateX(0px)
-
-    &.is-emph
-      animation-name: tada
-      animation-duration: 1s
-      animation-fill-mode: both
-      z-index: 1
-
-    &:after
-      content: ''
-      display: block
-      padding-top: 100%
-
-  .article-meta
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: fade-out(#3d96cb, 0.3)
-    color: white
-    padding: 10px
-    transform: translate(0%, 100%) scale(0.5)
-    transition: all 200ms ease-in-out
-    opacity: 0
-
-    .name
-      font-size: 18px
-      line-height: 1.2
-
-    .date
-      font-style: italic
-
-  .article-thumb:hover .article-meta
-    opacity: 1
-    transform: translate(0%, 0%) scale(1)
-
-  @media(max-width: 640px)
-    .desc-wrap
-      
-      width: 100%
-
-  @media(max-width: 999px) and (min-width: 640px)
-    .article-thumb
-      width: 33.33%
+.main-content  
+  padding: 10%
+  flex: 1 1 80%
+  min-height: 80vh
 
 
-@keyframes tada
-  0%
-    transform: scale3d(1, 1, 1)
+.portfolio  
+  display: grid
+  height: 20%
+  grid-template-rows: repeat(8, 1fr)
+  grid-template-columns: repeat(5, 1fr)
+  grid-gap: 20px
 
-  10%, 20%
-    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
 
-  30%, 50%, 70%, 90%
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+.portfolio-item  
+  background: #f96855
+  color: #c4c4c4
+  font-weight: 700
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 1.5em
+  background-size: cover
+  background-position: top left
+  transition: all ease-in-out 300ms
+  position: relative
+  z-index: 10
 
-  40%, 60%, 80%
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+.portfolio-item.small  
+  grid-row: span 1
+  grid-column: span 1
 
-  100%
-    transform: scale3d(1, 1, 1)
+.portfolio-item.medium  
+  grid-row: span 2
+  grid-column: span 2
+
+.portfolio-item.large  
+  grid-row: span 3
+  grid-column: span 3
+
+.portfolio-item.tall  
+  grid-row: span 3
+  grid-column: span 2
+
+.portfolio-item.wide  
+  grid-row: span 2
+  grid-column: span 3
+
+.portfolio-item:hover  
+  color: white
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.85)
+
+
+.two  
+  background-image: url(//unsplash.it/800/600)
+
+.two::before  
+  content: ''
+  display: block
+  background: #353535
+  opacity: 0.8
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  transition: all ease-in-out 700ms
+  z-index: -1
+
+.two:hover::before 
+  opacity: 0.2
+
